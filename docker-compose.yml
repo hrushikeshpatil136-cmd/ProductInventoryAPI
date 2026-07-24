@@ -1,0 +1,12 @@
+﻿version: '3.8'
+
+services:
+  productinventoryapi:
+    build:
+      context: .
+      dockerfile: ProductInventoryAPI/Dockerfile
+    container_name: productinventoryapi
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
